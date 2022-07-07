@@ -107,3 +107,9 @@ ul {
     height: 50px;
     width: 50px;
 }
+
+@media only screen and (max-width: 440px) {
+    .Thermostat-Container {
+        width: 90%;
+    }
+}
