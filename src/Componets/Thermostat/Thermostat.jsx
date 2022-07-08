@@ -20,15 +20,15 @@ function Thermostat() {
             setCurrentTemparatureColor("cool")
         }
 
-        if (newTemperature > 10) {
+        if (newTemperature >= 10) {
             setCurrentTemparatureColor("normal")
         }
 
-        if (newTemperature > 17) {
+        if (newTemperature >= 17) {
             setCurrentTemparatureColor("warm")
         }
 
-        if (newTemperature > 20) {
+        if (newTemperature >= 20) {
             setCurrentTemparatureColor("hot")
         }
 
@@ -54,7 +54,7 @@ function Thermostat() {
             setCurrentTemparatureColor("normal")
         } 
 
-        if (newTemperature < 10) {
+        if (newTemperature <= 10) {
             setCurrentTemparatureColor("cool")
         } 
 
@@ -73,8 +73,8 @@ function Thermostat() {
         </div>
 
         <div className="Control-Button-Container">
-            <button onClick={() => increaseTemperature()} className="Control-Button">+</button>
-            <button onClick={() => decreaseTemperature()} className="Control-Button">-</button>
+            <button onClick={() => increaseTemperature()} className="Control-Button"><p id="Control-Icon">+</p></button>
+            <button onClick={() => decreaseTemperature()} className="Control-Button"><p id="Control-Icon">-</p></button>
         </div>
     </div>
   )

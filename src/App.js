@@ -5,7 +5,9 @@ import Thermostat from './Componets/Thermostat/Thermostat';
 function App() {
   return (
     <div className="App">
-      <Thermostat/>
+      <Thermostat
+      title={'Thermostat'}
+      />
     </div>
   );
 }
