@@ -10,20 +10,28 @@ function Thermostat() {
     const increaseTemperature = () => {
         const newTemperature = currentTemperature + 1;
 
-        if (newTemperature > 30) return;
-                        
-        if (newTemperature <= 11) {
-            setCurrentTemparatureColor("normal");
+        if (newTemperature > 25) return;
+
+        if (newTemperature === 15) {
+            setCurrentTemparatureColor("normal")
         }
 
-        if (newTemperature <= 19) {
-            setCurrentTemparatureColor("normal");
+        if (newTemperature > 5) {
+            setCurrentTemparatureColor("cool")
         }
 
-
-        if (newTemperature >= 20) {
-            setCurrentTemparatureColor("hot");
+        if (newTemperature > 10) {
+            setCurrentTemparatureColor("normal")
         }
+
+        if (newTemperature > 17) {
+            setCurrentTemparatureColor("warm")
+        }
+
+        if (newTemperature > 20) {
+            setCurrentTemparatureColor("hot")
+        }
+
 
         setCurrentTemperature(newTemperature);
     }
@@ -31,15 +39,28 @@ function Thermostat() {
     const decreaseTemperature = () => {
         const newTemperature = currentTemperature - 1;
 
-        if (newTemperature < 0) return;
+        if (newTemperature < 5) return;
         
-        if (newTemperature > 11) {
-            setCurrentTemparatureColor("normal");
-        }
+
+        if (newTemperature === 15) {
+            setCurrentTemparatureColor("normal")
+        } 
+
+        if (newTemperature < 20) {
+            setCurrentTemparatureColor("warm")
+        } 
+
+        if (newTemperature < 17) {
+            setCurrentTemparatureColor("normal")
+        } 
 
         if (newTemperature < 10) {
-            setCurrentTemparatureColor("cold");
-        }
+            setCurrentTemparatureColor("cool")
+        } 
+
+        if (newTemperature <= 5) {
+            setCurrentTemparatureColor("cold")
+        } 
 
         setCurrentTemperature(newTemperature);
     }
